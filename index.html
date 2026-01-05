@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 DARK TOOLS | SMS Bomber v1.0</title>
+    <meta name="description" content="Professional SMS Testing Tools - For Educational Purposes Only">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/hacker.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <div class="matrix-bg"></div>
+    
+    <!-- Legal Warning Modal -->
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-radiation"></i>
+                <h2>⚠️ SECURITY WARNING</h2>
+            </div>
+            <div class="modal-body">
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> LEGAL DISCLAIMER</h3>
+                    <ul>
+                        <li><i class="fas fa-ban"></i> This tool is for <strong>EDUCATIONAL PURPOSES ONLY</strong></li>
+                        <li><i class="fas fa-user-shield"></i> Use only on phone numbers that <strong>YOU OWN</strong></li>
+                        <li><i class="fas fa-gavel"></i> Unauthorized use is <strong>ILLEGAL</strong></li>
+                        <li><i class="fas fa-shield-alt"></i> Developer is not responsible for misuse</li>
+                    </ul>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="agreeCheckbox">
+                        <label for="agreeCheckbox">I understand and accept all terms</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="acceptBtn" class="btn-accept" disabled>
+                    <i class="fas fa-unlock"></i> ACCESS TOOLS
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-skull-crossbones"></i></span>
+                <h1 class="logo-text glitch" data-text="DARK_TOOLS">DARK_TOOLS</h1>
+                <span class="version">v1.0</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> HOME</a>
+                <a href="#tools" class="nav-link"><i class="fas fa-tools"></i> TOOLS</a>
+                <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> ABOUT</a>
+                <a href="#updates" class="nav-link"><i class="fas fa-sync-alt"></i> UPDATES</a>
+            </div>
+            
+            <div class="header-stats">
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span id="onlineUsers">1,247</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-bolt"></i>
+                    <span>ONLINE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-text">
+                    <h2 class="typewriter">WELCOME TO DARK TOOLS</h2>
+                    <p class="subtitle">Advanced SMS Testing Platform</p>
+                    
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">root@darktools:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p>> Initializing system...</p>
+                            <p>> Loading security protocols...</p>
+                            <p class="blink">> Ready for commands...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-rocket"></i>
+                            <h3>100%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>24/7</h3>
+                            <p>Uptime</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Fast</h3>
+                            <p>Execution</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools Section -->
+            <section id="tools" class="tools-section">
+                <h2 class="section-title">
+                    <i class="fas fa-bomb"></i> AVAILABLE TOOLS
+                </h2>
+                
+                <div class="tools-grid">
+                    <!-- SMS Bomber Tool -->
+                    <div class="tool-card active" data-tool="sms">
+                        <div class="tool-icon">
+                            <i class="fas fa-sms"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3>SMS BOMBER</h3>
+                            <p>Send multiple SMS/OTP to any Bangladeshi number</p>
+                            <span class="tool-status active">
+                                <i class="fas fa-circle"></i> ACTIVE
+                            </span>
+                        </div>
+                        <button class="tool-btn" onclick="openTool('sms')">
+                            <i class="fas fa-play"></i> LAUNCH
+                        </button>
+                    </div>
+
+                    <!-- Coming Soon Tools -->
+                    <div class="tool-card coming-soon" data-tool="call">
+                        <div class="tool-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3>CALL BOMBER</h3>
+                            <p>Coming soon - Make multiple calls</p>
+                            <span class="tool-status soon">
+                                <i class="fas fa-clock"></i> SOON
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="tool-card coming-soon" data-tool="email">
+                        <div class="tool-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3>EMAIL BOMBER</h3>
+                            <p>Coming soon - Send bulk emails</p>
+                            <span class="tool-status soon">
+                                <i class="fas fa-clock"></i> SOON
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="tool-card coming-soon" data-tool="ddos">
+                        <div class="tool-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3>STRESS TEST</h3>
+                            <p>Coming soon - Website testing tool</p>
+                            <span class="tool-status soon">
+                                <i class="fas fa-clock"></i> SOON
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SMS Bomber Interface (Hidden Initially) -->
+            <section id="smsTool" class="tool-interface" style="display: none;">
+                <div class="interface-header">
+                    <button class="back-btn" onclick="closeTool()">
+                        <i class="fas fa-arrow-left"></i> BACK
+                    </button>
+                    <h2><i class="fas fa-sms"></i> SMS BOMBER</h2>
+                    <div class="interface-stats">
+                        <span class="stat"><i class="fas fa-history"></i> Today: <span id="todayCount">0</span></span>
+                        <span class="stat"><i class="fas fa-check-circle"></i> Success: <span id="successRate">100%</span></span>
+                    </div>
+                </div>
+
+                <div class="interface-body">
+                    <!-- Target Input -->
+                    <div class="input-group">
+                        <label for="targetNumber">
+                            <i class="fas fa-bullseye"></i> TARGET NUMBER
+                        </label>
+                        <div class="input-with-code">
+                            <span class="country-code">+880</span>
+                            <input type="tel" id="targetNumber" 
+                                   placeholder="1XXXXXXXXXX" 
+                                   maxlength="10"
+                                   pattern="[0-9]{10}"
+                                   class="hacker-input">
+                            <button class="btn-validate" onclick="validateNumber()">
+                                <i class="fas fa-check"></i> VALIDATE
+                            </button>
+                        </div>
+                        <div class="input-hint">
+                            <i class="fas fa-info-circle"></i> Enter 10-digit Bangladesh number
+                        </div>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="settings-grid">
+                        <div class="setting">
+                            <label for="smsCount">
+                                <i class="fas fa-redo"></i> SMS COUNT
+                            </label>
+                            <div class="range-container">
+                                <input type="range" id="smsRange" min="1" max="100" value="10">
+                                <div class="range-display">
+                                    <input type="number" id="smsCount" value="10" min="1" max="100">
+                                    <span class="range-label">Messages</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="setting">
+                            <label for="delayTime">
+                                <i class="fas fa-clock"></i> DELAY (ms)
+                            </label>
+                            <div class="range-container">
+                                <input type="range" id="delayRange" min="500" max="5000" step="500" value="1000">
+                                <div class="range-display">
+                                    <input type="number" id="delayTime" value="1000" min="500" max="5000">
+                                    <span class="range-label">Milliseconds</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Selection -->
+                    <div class="api-section">
+                        <h3><i class="fas fa-plug"></i> SELECT API SERVICES</h3>
+                        <div class="api-grid">
+                            <div class="api-card">
+                                <input type="checkbox" id="api1" checked>
+                                <label for="api1">
+                                    <i class="fas fa-book"></i>
+                                    <span>Rokomari</span>
+                                    <span class="api-status active">ACTIVE</span>
+                                </label>
+                            </div>
+                            <div class="api-card">
+                                <input type="checkbox" id="api2" checked>
+                                <label for="api2">
+                                    <i class="fas fa-university"></i>
+                                    <span>PBS Bank</span>
+                                    <span class="api-status active">ACTIVE</span>
+                                </label>
+                            </div>
+                            <div class="api-card">
+                                <input type="checkbox" id="api3" checked>
+                                <label for="api3">
+                                    <i class="fas fa-film"></i>
+                                    <span>Bioscope</span>
+                                    <span class="api-status active">ACTIVE</span>
+                                </label>
+                            </div>
+                            <div class="api-card">
+                                <input type="checkbox" id="api4">
+                                <label for="api4">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Daraz</span>
+                                    <span class="api-status inactive">OFFLINE</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Control Buttons -->
+                    <div class="control-buttons">
+                        <button id="startBtn" class="btn-start" onclick="startAttack()">
+                            <i class="fas fa-play"></i> START ATTACK
+                        </button>
+                        <button id="stopBtn" class="btn-stop" onclick="stopAttack()" disabled>
+                            <i class="fas fa-stop"></i> STOP
+                        </button>
+                        <button class="btn-reset" onclick="resetAttack()">
+                            <i class="fas fa-undo"></i> RESET
+                        </button>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <h4><i class="fas fa-chart-line"></i> ATTACK PROGRESS</h4>
+                            <span id="progressText">0/10</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat">
+                                <i class="fas fa-paper-plane"></i>
+                                Sent: <span id="sentCount">0</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-check"></i>
+                                Success: <span id="successCount">0</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-times"></i>
+                                Failed: <span id="failedCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Log -->
+                    <div class="terminal-log">
+                        <div class="log-header">
+                            <h4><i class="fas fa-terminal"></i> ATTACK LOG</h4>
+                            <div class="log-controls">
+                                <button class="btn-copy" onclick="copyLogs()">
+                                    <i class="fas fa-copy"></i> COPY
+                                </button>
+                                <button class="btn-clear" onclick="clearLogs()">
+                                    <i class="fas fa-trash"></i> CLEAR
+                                </button>
+                            </div>
+                        </div>
+                        <div id="logContent" class="log-content">
+                            <p>> [SYSTEM] SMS Bomber initialized</p>
+                            <p>> [SYSTEM] Ready for target input</p>
+                            <p>> [SYSTEM] All APIs are active</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <h2><i class="fas fa-code"></i> ABOUT DARK TOOLS</h2>
+                <div class="about-content">
+                    <div class="about-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>SECURE</h3>
+                        <p>Encrypted connections and secure API calls</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>FAST</h3>
+                        <p>Lightning fast execution with minimal delay</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>UPDATED</h3>
+                        <p>Regular updates with new features</p>
+                    </div>
+                </div>
+                
+                <div class="features-list">
+                    <h3><i class="fas fa-star"></i> FEATURES</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> No login required - Free access</li>
+                        <li><i class="fas fa-check-circle"></i> Multiple API support</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time progress tracking</li>
+                        <li><i class="fas fa-check-circle"></i> Detailed attack logs</li>
+                        <li><i class="fas fa-check-circle"></i> Mobile responsive design</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Updates Section -->
+            <section id="updates" class="updates-section">
+                <h2><i class="fas fa-sync-alt"></i> RECENT UPDATES</h2>
+                <div class="updates-timeline">
+                    <div class="update-card">
+                        <span class="update-date">Today</span>
+                        <h3>v1.0 LAUNCHED</h3>
+                        <p>SMS Bomber tool released with 3 working APIs</p>
+                    </div>
+                    <div class="update-card">
+                        <span class="update-date">Coming Soon</span>
+                        <h3>v1.1 UPDATE</h3>
+                        <p>More APIs and Call Bomber feature</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>DARK TOOLS</h3>
+                    <p>Advanced Security Testing Platform</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" onclick="showWarning()"><i class="fas fa-gavel"></i> Terms</a>
+                    <a href="#" onclick="showWarning()"><i class="fas fa-shield-alt"></i> Privacy</a>
+                    <a href="#" onclick="showWarning()"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+                
+                <div class="footer-stats">
+                    <div class="stat">
+                        <i class="fas fa-globe"></i>
+                        <span>Served: <span id="totalRequests">0</span></span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-heart"></i>
+                        <span>Uptime: 100%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Dark Tools. For educational purposes only. Use responsibly.</p>
+                <p class="disclaimer">Not responsible for misuse. All attacks logged.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+              </html>
